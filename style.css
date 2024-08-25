@@ -20,7 +20,7 @@ body {
     background: var(--bg-color);
     color: var(--text-color);
     margin: 0;
-    padding-left: 250px; /* Espaço para o cabeçalho fixo */
+    padding-left: 250px;
 }
 
 header {
@@ -46,7 +46,7 @@ header {
 
 .navlist {
     display: flex;
-    list-style: none; /* Removendo os marcadores da lista do menu */
+    list-style: none;
 }
 
 .navlist li {
@@ -68,7 +68,7 @@ header {
 #menu-icon {
     font-size: 2rem;
     cursor: pointer;
-    display: none; /* Mostrar apenas em dispositivos móveis */
+    display: none;
 }
 
 section {
@@ -144,11 +144,11 @@ section {
 }
 
 .about-image img {
-    width: 100%; /* Diminuir o tamanho da imagem para 70% da largura do contêiner */
-    max-width: 300px; /* Definir um tamanho máximo */
+    width: 100%;
+    max-width: 300px;
     height: auto;
     border-radius: 15px;
-    object-fit: cover; /* Garantir que a imagem não distorça */
+    object-fit: cover;
 }
 
 .about-text h1 {
@@ -171,8 +171,8 @@ section {
 }
 
 .about-text ul {
-    list-style-type: disc; /* Mostrando bolinhas nas listas */
-    margin-left: 20px; /* Espaço à esquerda para alinhar as bolinhas */
+    list-style-type: disc;
+    margin-left: 20px;
     color: #717173;
     font-size: var(--p-font);
     line-height: 1.7;
@@ -180,7 +180,7 @@ section {
 
 .social-links {
     display: flex;
-    gap: 15px; /* Espaço entre os ícones */
+    gap: 15px;
     margin-top: 20px;
 }
 
@@ -206,7 +206,7 @@ section {
 }
 
 .heading {
-    text-align: center; /* Centraliza os títulos */
+    text-align: center;
     margin-bottom: 50px;
 }
 
@@ -246,12 +246,12 @@ section {
 }
 
 .project-logo img {
-    width: 50px; /* Ajustar o tamanho da logo */
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 100px; /* Aumenta o tamanho da logo para 100px */
+    height: 100px;
+    border-radius: 50%; /* Mantém a forma circular */
+    object-fit: cover; /* Gante que a imagem preencha o círculo sem distorção */
+    margin: 0 auto; /* Centraarliza a logo */
 }
-
 .project-details h4 {
     font-size: 1rem;
     margin-bottom: 5px;
