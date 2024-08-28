@@ -1,3 +1,4 @@
+/* Reset básico para remover margens, padding e definir box-sizing */
 * {
     padding: 0;
     margin: 0;
@@ -7,6 +8,7 @@
     scroll-behavior: smooth;
 }
 
+/* Variáveis globais de cores e tamanhos */
 :root {
     --main-color: #f25341;
     --text-color: #35404e;
@@ -16,6 +18,7 @@
     --p-font: 1.1rem;
 }
 
+/* Estilização geral do corpo */
 body {
     background: var(--bg-color);
     color: var(--text-color);
@@ -23,6 +26,7 @@ body {
     padding-left: 250px;
 }
 
+/* Cabeçalho fixo com estilo e sombra */
 header {
     position: fixed;
     width: 100vw;
@@ -38,12 +42,14 @@ header {
     box-sizing: border-box;
 }
 
+/* Logo do cabeçalho */
 .logo {
     font-size: 2.2rem;
     font-weight: 600;
     color: var(--main-color);
 }
 
+/* Lista de navegação do cabeçalho */
 .navlist {
     display: flex;
     list-style: none;
@@ -53,6 +59,7 @@ header {
     margin: 0 10px;
 }
 
+/* Links de navegação */
 .navlist a {
     color: var(--text-color);
     font-size: 1rem;
@@ -61,20 +68,24 @@ header {
     transition: color 0.4s;
 }
 
+/* Efeito hover nos links de navegação */
 .navlist a:hover {
     color: var(--main-color);
 }
 
+/* Ícone do menu (oculto por padrão) */
 #menu-icon {
     font-size: 2rem;
     cursor: pointer;
     display: none;
 }
 
+/* Estilo geral das seções */
 section {
     padding: 75px 2rem;
 }
 
+/* Estilo da seção inicial (home) */
 .home {
     width: 100%;
     min-height: 95vh;
@@ -84,6 +95,7 @@ section {
     align-items: center;
 }
 
+/* Texto da seção home */
 .home-text {
     display: flex;
     flex-direction: column;
@@ -104,161 +116,241 @@ section {
     margin-bottom: 25px;
 }
 
-.home-text p {
-    max-width: 100%;
-    width: 430px;
-    font-size: var(--p-font);
-    color: #717173;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
+/* Botão na seção home */
 .btn {
     display: inline-block;
     padding: 10px 30px;
     color: white;
     background: var(--main-color);
     border-radius: 5rem;
-    text-align: center;
-    text-decoration: none;
-    margin-top: 20px;
+    transition: background-color 0.3s;
 }
 
-.btn i {
-    margin-right: 10px;
-}
-
+/* Efeito hover no botão */
 .btn:hover {
-    transform: scale(1.2);
-    background: #f37465;
-    transition: 0.4s;
-    box-shadow: 0 5px 15px 2px rgba(63, 44, 44, 0.18);
+    background: #d94a3a;
 }
 
+/* Imagem da seção home (dimensões) */
+.home-img {
+    width: 100%;
+    height: 60px;
+    background: url('img/Home.jpeg') no-repeat center center/cover;
+}
+
+/* Estilo da seção about (sobre mim) */
 .about {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 5rem;
+    grid-gap: 4rem;
     align-items: center;
-    padding-top: 100px;
+}
+
+/* Estilo do texto e imagem da seção about */
+.about-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .about-image img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 15px;
-    object-fit: cover;
+    width: 80%; /* Ajuste a largura conforme necessário */
+    max-width: 300px; /* Limita a largura máxima da imagem */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Títulos na seção about */
 .about-text h1 {
-    font-size: var(--big-font);
+    font-size: 2.5rem;
     color: var(--text-color);
     margin-bottom: 15px;
 }
 
 .about-text h2 {
-    font-size: var(--h2-font);
+    font-size: 1.8rem;
+    font-weight: 300;
     color: var(--main-color);
     margin-bottom: 15px;
 }
 
-.about-text p {
-    color: #717173;
-    font-size: var(--p-font);
-    line-height: 1.7;
-    margin-bottom: 20px;
-}
-
 .about-text ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    color: #717173;
-    font-size: var(--p-font);
-    line-height: 1.7;
+    list-style-type: none;
+    margin-bottom: 25px;
 }
 
-.social-links {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.social-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background: var(--main-color);
-    color: white;
-    transition: background 0.3s, transform 0.3s;
-}
-
-.social-links a:hover {
-    background: #f37465;
-    transform: scale(1.2);
-}
-
-.services {
-    padding: 50px 2rem;
-}
-
-.heading {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.heading span {
-    display: block;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: var(--main-color);
+.about-text ul li {
+    font-size: 1.1rem;
+    color: var(--text-color);
     margin-bottom: 10px;
 }
 
-.heading h2 {
-    font-size: var(--big-font);
+/* Links sociais na seção about */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    font-size: 2rem;
     color: var(--text-color);
+    transition: color 0.4s;
+}
+
+.social-links a:hover {
+    color: var(--main-color);
+}
+
+/* Estilo da seção serviços */
+.services {
+    text-align: center;
+}
+
+.services .heading {
+    margin-bottom: 40px;
+}
+
+.services .heading span {
+    font-size: 1.2rem;
     font-weight: 600;
+    color: var(--main-color);
+}
+
+.services .heading h2 {
+    font-size: var(--h2-font);
+    color: var(--text-color);
+    margin-bottom: 20px;
 }
 
 .service-container {
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
 }
 
 .service-item {
-    display: flex;
-    align-items: center;
     background: #fff;
-    padding: 20px;
+    border: 2px solid var(--main-color);
     border-radius: 10px;
+    padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
 }
 
 .project-info {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 20px;
+    text-align: center;
 }
 
 .project-logo img {
-    width: 100px; /* Aumenta o tamanho da logo para 100px */
-    height: 100px;
-    border-radius: 50%; /* Mantém a forma circular */
-    object-fit: cover; /* Gante que a imagem preencha o círculo sem distorção */
-    margin: 0 auto; /* Centraarliza a logo */
+    width: 80px; /* Ajuste o tamanho da logo conforme necessário */
+    height: auto;
 }
+
+.project-details {
+    margin-top: 10px;
+}
+
 .project-details h4 {
-    font-size: 1rem;
-    margin-bottom: 5px;
-    color: var(--main-color);
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
 }
 
 .project-details p {
-    font-size: 0.9rem;
-    color: #717173;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* Estilo da área de projetos */
+.projects {
+    text-align: center;
+}
+
+.projects .heading h2 {
+    font-size: var(--h2-font);
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-item {
+    width: 300px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Estilo da seção de habilidades */
+.skills {
+    text-align: center;
+}
+
+.skills .heading h2 {
+    font-size: var(--h2-font);
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.skill-item {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+}
+
+.skill-item i {
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+.skill-item h3 {
+    font-size: 1.2rem;
+    color: var(--text-color);
 }
