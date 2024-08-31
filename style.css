@@ -274,6 +274,7 @@ section {
 }
 
 /* Estilo da área de projetos */
+/* Estilo da área de projetos */
 .projects {
     text-align: center;
 }
@@ -288,32 +289,45 @@ section {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px; /* Espaçamento entre os projetos */
 }
 
 .project-item {
-    width: 300px;
+    width: 550px; /* Largura das caixas de projetos */
+    height: 450px; /* Altura fixa para garantir que as caixas sejam retangulares */
     background: #fff;
     border-radius: 10px;
-    padding: 15px;
+    padding: 20px; /* Espaço interno aumentado */
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    position: relative; /* Garante que a imagem não saia do contêiner */
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites */
 }
 
 .project-item img {
-    width: 100%;
+    width: 100%; /* Ajusta a largura da imagem para preencher a caixa */
+    height: auto; /* Mantém a proporção da imagem */
+    max-height: 250px; /* Define a altura máxima da imagem */
+    object-fit: cover; /* Ajusta a imagem para preencher o espaço sem distorcer */
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Espaço abaixo da imagem */
 }
 
-.project-item:hover {
-    transform: translateY(-10px);
+.project-item h3, .project-item p {
+    margin: 0;
 }
+
 
 /* Estilo da seção de habilidades */
+/* Estilização da seção de habilidades */
 .skills {
     text-align: center;
+    margin-bottom: 50px; /* Adiciona um espaço abaixo da seção de habilidades */
 }
 
 .skills .heading h2 {
@@ -354,3 +368,47 @@ section {
     font-size: 1.2rem;
     color: var(--text-color);
 }
+
+
+/* Estilos do rodapé */
+/* Estilos do rodapé */
+footer {
+    background-color: #fff; /* Fundo branco */
+    color: #333; /* Cor do texto */
+    padding: 20px;
+    text-align: center; /* Centraliza o texto dentro do rodapé */
+    position: relative;
+    bottom: 0;
+    width: 100vw; /* Garantir que o rodapé ocupe 100% da largura da viewport */
+    left: 0; /* Alinhar o rodapé ao lado esquerdo da tela */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+    border-top: 1px solid #ddd; /* Linha sutil no topo do rodapé */
+    margin-left: calc(-100vw + 100%); /* Ajuste para compensar qualquer padding do body ou margem */
+  }
+  
+  footer .footer-content {
+    margin-bottom: 10px;
+  }
+  
+  footer .social-links {
+    margin-bottom: 10px;
+  }
+  
+  footer .social-links a {
+    color: #333; /* Cor dos ícones sociais */
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  footer .social-links a:hover {
+    color: #f39c12; /* Cor ao passar o mouse */
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 14px;
+    text-align: center; /* Centraliza o texto do parágrafo */
+  }
+  
+  
