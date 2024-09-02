@@ -1,4 +1,4 @@
-/* Reset básico para remover margens, padding e definir box-sizing */
+/* Reset and global styles */
 * {
     padding: 0;
     margin: 0;
@@ -8,7 +8,6 @@
     scroll-behavior: smooth;
 }
 
-/* Variáveis globais de cores e tamanhos */
 :root {
     --main-color: #f25341;
     --text-color: #35404e;
@@ -18,7 +17,6 @@
     --p-font: 1.1rem;
 }
 
-/* Estilização geral do corpo */
 body {
     background: var(--bg-color);
     color: var(--text-color);
@@ -26,7 +24,7 @@ body {
     padding-left: 250px;
 }
 
-/* Cabeçalho fixo com estilo e sombra */
+/* Header */
 header {
     position: fixed;
     width: 100vw;
@@ -42,14 +40,12 @@ header {
     box-sizing: border-box;
 }
 
-/* Logo do cabeçalho */
 .logo {
     font-size: 2.2rem;
     font-weight: 600;
     color: var(--main-color);
 }
 
-/* Lista de navegação do cabeçalho */
 .navlist {
     display: flex;
     list-style: none;
@@ -59,7 +55,6 @@ header {
     margin: 0 10px;
 }
 
-/* Links de navegação */
 .navlist a {
     color: var(--text-color);
     font-size: 1rem;
@@ -68,24 +63,26 @@ header {
     transition: color 0.4s;
 }
 
-/* Efeito hover nos links de navegação */
 .navlist a:hover {
     color: var(--main-color);
 }
 
-/* Ícone do menu (oculto por padrão) */
 #menu-icon {
     font-size: 2rem;
     cursor: pointer;
     display: none;
 }
 
-/* Estilo geral das seções */
+/* Section styles */
 section {
     padding: 75px 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    flex-direction: column;
 }
 
-/* Estilo da seção inicial (home) */
 .home {
     width: 100%;
     min-height: 95vh;
@@ -93,13 +90,14 @@ section {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 5rem;
     align-items: center;
+    justify-content: center; 
+    text-align: center;
 }
 
-/* Texto da seção home */
 .home-text {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; 
 }
 
 .home-text h5 {
@@ -116,7 +114,6 @@ section {
     margin-bottom: 25px;
 }
 
-/* Botão na seção home */
 .btn {
     display: inline-block;
     padding: 10px 30px;
@@ -126,41 +123,38 @@ section {
     transition: background-color 0.3s;
 }
 
-/* Efeito hover no botão */
 .btn:hover {
     background: #d94a3a;
 }
 
-/* Imagem da seção home (dimensões) */
 .home-img {
     width: 100%;
     height: 60px;
     background: url('img/Home.jpeg') no-repeat center center/cover;
 }
 
-/* Estilo da seção about (sobre mim) */
 .about {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 4rem;
     align-items: center;
+    justify-content: center; 
+    text-align: center;
 }
 
-/* Estilo do texto e imagem da seção about */
 .about-text {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; 
 }
 
 .about-image img {
-    width: 80%; /* Ajuste a largura conforme necessário */
-    max-width: 300px; /* Limita a largura máxima da imagem */
+    width: 80%; 
+    max-width: 300px; 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Títulos na seção about */
 .about-text h1 {
     font-size: 2.5rem;
     color: var(--text-color);
@@ -185,7 +179,6 @@ section {
     margin-bottom: 10px;
 }
 
-/* Links sociais na seção about */
 .social-links {
     display: flex;
     gap: 15px;
@@ -201,7 +194,7 @@ section {
     color: var(--main-color);
 }
 
-/* Estilo da seção serviços */
+/* Services Section */
 .services {
     text-align: center;
 }
@@ -256,6 +249,7 @@ section {
 .project-logo img {
     width: 80px; /* Ajuste o tamanho da logo conforme necessário */
     height: auto;
+    border-radius: 39px;
 }
 
 .project-details {
@@ -273,8 +267,7 @@ section {
     color: var(--text-color);
 }
 
-/* Estilo da área de projetos */
-/* Estilo da área de projetos */
+/* Projects Section */
 .projects {
     text-align: center;
 }
@@ -293,41 +286,32 @@ section {
 }
 
 .project-item {
-    width: 550px; /* Largura das caixas de projetos */
-    height: 450px; /* Altura fixa para garantir que as caixas sejam retangulares */
+    width: 550px; 
+    height: 450px; 
     background: #fff;
     border-radius: 10px;
-    padding: 20px; /* Espaço interno aumentado */
+    padding: 20px; 
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza o conteúdo horizontalmente */
-    justify-content: center; /* Centraliza o conteúdo verticalmente */
-    position: relative; /* Garante que a imagem não saia do contêiner */
-    overflow: hidden; /* Garante que a imagem não ultrapasse os limites */
+    align-items: center; 
+    justify-content: center; 
+    position: relative; 
+    overflow: hidden; 
 }
 
 .project-item img {
-    width: 100%; /* Ajusta a largura da imagem para preencher a caixa */
-    height: auto; /* Mantém a proporção da imagem */
-    max-height: 250px; /* Define a altura máxima da imagem */
-    object-fit: cover; /* Ajusta a imagem para preencher o espaço sem distorcer */
+    width: 100%; /* Ajusta a largura da imagem para preencher o container */
+    height: auto;
     border-radius: 10px;
-    margin-bottom: 20px; /* Espaço abaixo da imagem */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.project-item h3, .project-item p {
-    margin: 0;
-}
-
-
-/* Estilo da seção de habilidades */
-/* Estilização da seção de habilidades */
+/* Skills Section */
 .skills {
     text-align: center;
-    margin-bottom: 50px; /* Adiciona um espaço abaixo da seção de habilidades */
 }
 
 .skills .heading h2 {
@@ -338,24 +322,22 @@ section {
 
 .skills-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Espaçamento entre as skills */
 }
 
 .skill-item {
-    width: 150px;
-    height: 150px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
-    border: 2px solid var(--main-color);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 15px;
+    align-items: center; 
+    justify-content: center; 
 }
 
 .skill-item i {
@@ -369,46 +351,63 @@ section {
     color: var(--text-color);
 }
 
-
-/* Estilos do rodapé */
-/* Estilos do rodapé */
+/* Footer */
 footer {
-    background-color: #fff; /* Fundo branco */
-    color: #333; /* Cor do texto */
+    background: var(--bg-color);
     padding: 20px;
-    text-align: center; /* Centraliza o texto dentro do rodapé */
-    position: relative;
-    bottom: 0;
-    width: 100vw; /* Garantir que o rodapé ocupe 100% da largura da viewport */
-    left: 0; /* Alinhar o rodapé ao lado esquerdo da tela */
-    box-sizing: border-box; /* Inclui padding e borda na largura total */
-    border-top: 1px solid #ddd; /* Linha sutil no topo do rodapé */
-    margin-left: calc(-100vw + 100%); /* Ajuste para compensar qualquer padding do body ou margem */
-  }
-  
-  footer .footer-content {
-    margin-bottom: 10px;
-  }
-  
-  footer .social-links {
-    margin-bottom: 10px;
-  }
-  
-  footer .social-links a {
-    color: #333; /* Cor dos ícones sociais */
-    margin: 0 10px;
-    text-decoration: none;
-    font-size: 20px;
-  }
-  
-  footer .social-links a:hover {
-    color: #f39c12; /* Cor ao passar o mouse */
-  }
-  
-  footer p {
-    margin: 0;
-    font-size: 14px;
-    text-align: center; /* Centraliza o texto do parágrafo */
-  }
-  
-  
+    text-align: center;
+}
+
+.footer-content p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding-left: 0;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .navlist {
+        display: none;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .home {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .service-container {
+        flex-direction: column;
+    }
+
+    .project-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .project-item {
+        width: 100%;
+        max-width: 100%;
+    }
+}
